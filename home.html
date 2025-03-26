@@ -6,29 +6,41 @@
 
 		<title>PALORANT</title>
 		<link rel="icon" href="assets/img/logo/logo-white.png" type="image/x-icon" />
-		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="homeStyle.css" />
 	</head>
 	<body>
 		<header>
-			<nav>
+			<nav id="navbar">
+				<div class="logo-container sidebar-hide">
+					<a href="home.html">
+						<img src="assets/img/logo/logo-palorant-white.PNG" alt="Palorant Logo" />
+					</a>
+				</div>
 				<ul>
-					<li class="logo-li">
-						<a href="home.html">
-							<img src="assets/img/logo/logo-palorant-white.PNG" alt="" />
-						</a>
+					<li class="close-sidebar" id="close-sidebar" onclick="closeSideBar()">
+						<img class="close-sidebar-img" src="assets/img/icon/close-logo.svg" alt="" />
 					</li>
-					<li class="home-li active"><a href="home.html">Home</a></li>
+					<li class="home-li"><a href="home.html">Home</a></li>
 					<li class="agents-li"><a href="agents.html">Agents</a></li>
 					<li class="maps-li"><a href="maps.html">Maps</a></li>
 					<li class="news-li"><a href="news.html">News</a></li>
 					<li class="bugreport-li"><a href="bugreport.html">Bug Report</a></li>
 				</ul>
 			</nav>
+			<div class="nav-showMobile mobile-logo-container" id="nav-mobile">
+				<a href="home.html">
+					<img class="logo-container" src="assets/img/logo/logo-palorant-white.PNG" alt="Palorant Logo" />
+				</a>
+				<button class="open-sidebar" id="open-sidebar" onclick="openSideBar()">
+					<img class="open-sidebar-img" src="assets/img/icon/hamburger-logo.svg" alt="" />
+				</button>
+			</div>
+			<div id="overlay" onclick="closeSideBar()"></div>
 		</header>
 		<header class="hero-content">
 			<h1 class="hero-heading">Palorant</h1>
 			<p class="hero-paragraph">A 5v5 team-based tactical shooter with immersive gameplay</p>
-			<button class="play-now-btn">Play Now</button>
+			<button class="play-now-btn btn">Play Now</button>
 			<video loop muted autoplay class="background-video">
 				<source src="assets/img/video/palorant-cinematic-mute.mp4" type="video/mp4" />
 			</video>
@@ -64,17 +76,23 @@
 		</div>
 		<section id="home-news">
 			<div class="home-news-wrapper">
-				<h2 class="home-news-heading">What's New?</h2>
-				<div class="home-news-container">
+				<div class="news-heading-container">
+					<a href="agents.html" class="news-redirect hover-animation-white redirect invicible">See More News →</a>
+					<h2 class="home-news-heading">What's New?</h2>
+					<a href="agents.html" class="news-redirect hover-animation-white redirect">See More News →</a>
+				</div>
+				<div class="news-container">
 					<a href="agents.html" class="news-1">
-						<div class="home-news-card">
-							<img src="assets/img/news/valorant-news-1.png" alt="" class="news-img" />
+						<div class="news-card">
+							<div class="news-img-box">
+								<img src="assets/img/news/valorant-news-1.png" alt="" class="news-img" />
+							</div>
 							<div class="news-description">
 								<p class="news-date">
 									<span class="news-type">Patch Notes</span>
 									| 20/1/2025
 								</p>
-								<h6 class="news-title">PALORANT Patch Notes 1.00</h6>
+								<h6 class="news-title hover-animation-white redirect">PALORANT Patch Notes 1.00</h6>
 								<p class="news-description">
 									Vapor joins the lineup, along with fresh cosmetics, a revamped map rotation, improved Remake
 									Voting mechanics, and additional updates.
@@ -83,14 +101,16 @@
 						</div>
 					</a>
 					<a href="" class="news-2">
-						<div class="home-news-card">
-							<img src="assets/img/news/valorant-news-2.png" alt="" class="news-img" />
+						<div class="news-card">
+							<div class="news-img-box">
+								<img src="assets/img/news/valorant-news-2.png" alt="" class="news-img" />
+							</div>
 							<div class="news-description">
 								<p class="news-date">
 									<span class="news-type">Competitive</span>
 									| 12/1/2025
 								</p>
-								<h6 class="news-title">VCT Americas Kick-Off 2025</h6>
+								<h6 class="news-title hover-animation-white redirect">VCT Americas Kick-Off 2025</h6>
 								<p class="news-description">
 									It has arrived! Don’t miss the VCT Americas 2025 Kickoff Trailer—tune in from January 16 to
 									February 8!
@@ -99,14 +119,16 @@
 						</div>
 					</a>
 					<a href="" class="news-3">
-						<div class="home-news-card">
-							<img src="assets/img/news/valorant-news-3.png" alt="" class="news-img" />
+						<div class="news-card">
+							<div class="news-img-box">
+								<img src="assets/img/news/valorant-news-3.png" alt="" class="news-img" />
+							</div>
 							<div class="news-description">
 								<p class="news-date">
 									<span class="news-type">Skin Update</span>
 									| 10/1/2025
 								</p>
-								<h6 class="news-title">Void Skin Bundle Released!</h6>
+								<h6 class="news-title hover-animation-white redirect">Void Skin Bundle Released!</h6>
 								<p class="news-description">
 									The latest skin bundle is live, featuring sleek designs and eye-catching style. Claim yours
 									and dominate the game in style!
@@ -136,14 +158,46 @@
 						lasting impression.
 					</p>
 					<div class="agents-redirect-container">
-						<a href="agents.html" class="agents-redirect">See More Agents →</a>
+						<a href="agents.html" class="agents-redirect hover-animation-black redirect">See More Agents →</a>
 					</div>
 				</div>
-				<div class="agents-carousel">
-					<div class="agent-carousel-yori">Yori</div>
-					<div class="agent-carousel-amen">Amen</div>
-					<div class="agent-carousel-skyo">Skyi</div>
-					<div class="agent-carousel-sifer">Sifer</div>
+				<div class="carousel-agent">
+					<div class="carousel-agent-container">
+						<button class="carousel-agent-controll-previous">
+							<img src="assets/img/icon/arrow-left-primary.svg" alt="Previous" class="arrow-icon" />
+						</button>
+						<a href="item1.html">
+							<img
+								src="assets/img/agents/amen-title.PNG"
+								alt="Amen"
+								class="carousel-agent-item carousel-agent-item-1"
+								data-index="1" />
+						</a>
+						<a href="item2.html">
+							<img
+								src="assets/img/agents/skyo-title.PNG"
+								alt="Skyo"
+								class="carousel-agent-item carousel-agent-item-2"
+								data-index="2" />
+						</a>
+						<a href="item3.html">
+							<img
+								src="assets/img/agents/yori-title.PNG"
+								alt="Yori"
+								class="carousel-agent-item carousel-agent-item-3"
+								data-index="3" />
+						</a>
+						<a href="item4.html">
+							<img
+								src="assets/img/agents/sifer-title.PNG"
+								alt="Splot Map"
+								class="carousel-agent-item carousel-agent-item-4"
+								data-index="4" />
+						</a>
+						<button class="carousel-agent-controll-next">
+							<img src="assets/img/icon/arrow-right-primary.svg" alt="Next" class="arrow-icon" />
+						</button>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -153,47 +207,56 @@
 				<div class="separator-trapesium-bawah"></div>
 			</div>
 		</div>
-
 		<section id="home-maps">
 			<div class="maps-heading-container">
 				<h2 class="home-maps-heading">MAPS</h2>
 				<p class="maps-heading-background">MAPS</p>
 			</div>
-			<!-- <div class="home-maps-container">
-				<div class="maps-carousel">
-					<div class="map-carousel-item map-carousel-havent" data-index="1">
-						<a href="maps/" class="map-carousel-item">
-							<img src="assets/img/maps/havent/havent.webp" alt="" class="map-carousel-img carousel-havent" />
-							<p class="carousel-text">HAVENT</p>
-						</a>
-					</div>
-					<div class="map-carousel-ascant" data-index="2">
-						<a href="maps/" class="map-carousel-item">
-							<img src="assets/img/maps/ascant/ascant.webp" alt="" class="map-carousel-img carousel-ascant" />
-							<p class="carousel-text">ASCANT</p>
-						</a>
-					</div>
-					<div class="map-carousel-splot" data-index="3">
-						<a href="maps/" class="map-carousel-item">
-							<img src="assets/img/maps/splot/splot.webp" alt="" class="map-carousel-img carousel-splot" />
-							<p class="carousel-text">SPLOT</p>
-						</a>
-					</div>
-					<div class="map-carousel-bend" data-index="4">
-						<a href="maps/" class="map-carousel-item">
-							<img src="assets/img/maps/bend/bend.webp" alt="" class="map-carousel-img carousel-bend" />
-							<p class="carousel-text">BEND</p>
-						</a>
-					</div>
-					<div class="map-carousel-sunrise" data-index="5">
-						<a href="maps/" class="map-carousel-item">
-							<img src="assets/img/maps/sunrise/sunrise.webp" alt="" class="map-carousel-img carousel-sunrise" />
-							<p class="carousel-text">SUNRISE</p>
-						</a>
-					</div>
+			<div class="carousel-map">
+				<div class="carousel-map-container">
+					<button class="carousel-map-controll-previous">
+						<img src="assets/img/icon/arrow-left-white.svg" alt="Previous" class="arrow-icon" />
+					</button>
+					<a href="item1.html">
+						<img
+							src="assets/img/maps/ascant/ascant-title.PNG"
+							alt="Ascant Map"
+							class="carousel-map-item carousel-map-item-1"
+							data-index="1" />
+					</a>
+					<a href="item2.html">
+						<img
+							src="assets/img/maps/bend/bend-title.PNG"
+							alt="Bend Map"
+							class="carousel-map-item carousel-map-item-2"
+							data-index="2" />
+					</a>
+					<a href="item3.html">
+						<img
+							src="assets/img/maps/havent/havent-title.PNG"
+							alt="Haven Map"
+							class="carousel-map-item carousel-map-item-3"
+							data-index="3" />
+					</a>
+					<a href="item4.html">
+						<img
+							src="assets/img/maps/splot/splot-title.PNG"
+							alt="Splot Map"
+							class="carousel-map-item carousel-map-item-4"
+							data-index="4" />
+					</a>
+					<a href="item5.html">
+						<img
+							src="assets/img/maps/sunrise/sunrise-title.PNG"
+							alt="Sunrise Map"
+							class="carousel-map-item carousel-map-item-5"
+							data-index="5" />
+					</a>
+					<button class="carousel-map-controll-next">
+						<img src="assets/img/icon/arrow-right-white.svg" alt="Next" class="arrow-icon" />
+					</button>
 				</div>
-				<div class="carousel-controls"></div>
-			</div> -->
+			</div>
 		</section>
 		<footer class="footer-content">
 			<div class="footer-container">
@@ -207,11 +270,15 @@
 					<div class="wrapper-quick-links">
 						<h3>Quick Links</h3>
 						<ul>
-							<li class="footer-home-li"><a href="home.html">Home</a></li>
-							<li class="footer-agents-li"><a href="agents.html">Agents</a></li>
-							<li class="footer-maps-li"><a href="maps.html">Maps</a></li>
-							<li class="footer-news-li"><a href="news.html">News</a></li>
-							<li class="footer-bugreport-li"><a href="bugreport.html">Bug Report</a></li>
+							<li class="footer-home-li"><a class="hover-animation-white redirect" href="home.html">Home</a></li>
+							<li class="footer-agents-li">
+								<a class="hover-animation-white redirect" href="agents.html">Agents</a>
+							</li>
+							<li class="footer-maps-li"><a class="hover-animation-white redirect" href="maps.html">Maps</a></li>
+							<li class="footer-news-li"><a class="hover-animation-white redirect" href="news.html">News</a></li>
+							<li class="footer-bugreport-li">
+								<a class="hover-animation-white redirect" href="bugreport.html">Bug Report</a>
+							</li>
 						</ul>
 					</div>
 					<div class="wrapper-social">
@@ -242,6 +309,7 @@
 				</div>
 			</div>
 		</footer>
-		<script src="script.js"></script>
+		<script src="script.js" defer></script>
+		<script src="homeScript.js" defer></script>
 	</body>
 </html>
