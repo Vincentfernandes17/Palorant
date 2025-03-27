@@ -1,13 +1,8 @@
 @import url(base.css);
 
-.separator-trapesium-bawah {
-	background-color: var(--primary-color);
-}
-
-.container-trapesium-bawah {
+.hero-section {
 	background-color: var(--white-color);
-	width: 100%;
-	height: auto;
+	padding-bottom: 1rem;
 }
 
 .hero-container {
@@ -17,6 +12,7 @@
 	width: 100%;
 	justify-content: center;
 	align-items: center;
+	color: var(--white-color);
 }
 
 .hero-wrap {
@@ -31,13 +27,7 @@
 	padding: 0rem 4rem;
 	z-index: 2;
 	flex-flow: row wrap;
-	clip-path: polygon(
-		0 0%,
-		100% 0%,
-		100% calc((98% + (5vw - 72px))),
-		calc(8% - (1vw - 30px)) calc((98% + (5vw - 72px))),
-		0 calc((90% + (0.1vw - 72px)))
-	);
+	clip-path: polygon(0 0%, 100% 0%, 100% calc((98% + (5vw - 72px))), calc(8% - (1vw - 30px)) calc((98% + (5vw - 72px))), 0 calc((90% + (0.1vw - 72px))));
 	/* clip-path: polygon(0 0%, 100% 0%, 100% calc(77% + (5vw - 72px)), calc(8% - (1vw - 30px)) calc(77% + (5vw - 72px))); */
 }
 
@@ -49,6 +39,7 @@
 	align-items: center;
 	flex-flow: column wrap;
 	padding: 6rem 0rem;
+	justify-content: center;
 }
 
 .hero-content {
@@ -192,6 +183,7 @@
 	justify-content: center;
 	gap: 4rem;
 	padding: 4rem 3rem;
+	background-color: var(--white-color);
 }
 
 .agent-card {
@@ -318,12 +310,63 @@
 	}
 }
 
+/* tablet view */
 @media screen and (max-width: 768px) {
 	.agents-role-container {
-		margin-bottom: 6.25rem;
+		margin-bottom: 6rem;
+		width: 95%;
 	}
 	.agents-grid {
 		gap: 2rem;
 		padding: 3rem 2rem;
+	}
+	.hero-wrap {
+		padding: 0rem 3rem;
+	}
+	.hero-heading {
+		font-size: calc(1.125rem + 11.5vw);
+	}
+	.line-separator.line-agent {
+		margin: -1.125rem 0 0 0;
+	}
+	.hero-text {
+		font-size: 1.375rem;
+	}
+	.role-description {
+		font-size: 1.375rem;
+	}
+	.hero-content {
+		height: 40rem;
+		margin-top: -10px;
+	}
+}
+
+/* mobile view */
+@media screen and (max-width: 480px) {
+	.hero-wrap {
+		padding: 0rem 2rem;
+	}
+	.role-description {
+		font-size: 1.125rem;
+	}
+	.agents-role-symbol {
+		max-height: 35%;
+	}
+	.hero-content {
+		height: 35rem;
+		margin-top: -50px;
+	}
+	.hero-heading {
+		width: 100%;
+	}
+	.line-separator.line-agent {
+		width: 100%;
+	}
+	.hero-text {
+		width: 100%;
+		font-size: 1.25rem;
+	}
+	.agents-role-container {
+		width: 100%;
 	}
 }

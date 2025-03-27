@@ -14,7 +14,7 @@
 .hero-heading {
 	font-family: "valorax";
 	color: var(--white-color);
-	font-size: 8.5rem;
+	font-size: calc(3rem + 8vw);
 	font-weight: normal;
 	text-shadow: var(--heading-shadow);
 	margin-top: -100px;
@@ -482,6 +482,8 @@
 	transition: transform 0.3s ease;
 	filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
+
+/* carousel spacing  */
 @media screen and (max-width: 878px) {
 	.carousel-agent {
 		width: 90%;
@@ -537,26 +539,49 @@
 	}
 }
 
+/* gameplay video size and news section heading alignment*/
+@media screen and (max-width: 580px) {
+	.container-description-media {
+		width: 25rem;
+		height: 15rem;
+	}
+	.news-heading-container {
+		flex-direction: column;
+	}
+	.dummy {
+		display: none;
+	}
+	/* .news-redirect {
+		font-size: 1.125rem;
+	} */
+}
+
+/* tablet view */
 @media screen and (max-width: 768px) {
 	.hero-heading {
-		font-size: 6.25rem;
+		font-size: calc(3.25rem + 5vw);
 	}
 	.hero-paragraph {
 		font-size: 1.625rem;
 	}
 	.description-heading-background {
-		font-size: calc(4rem + 10vw);
+		font-size: calc(2rem + 14vw);
+	}
+	.description-heading-background {
+		filter: blur(6px);
 	}
 	.home-description-heading {
-		font-size: calc(0.5rem + 11vw);
+		font-size: calc(0.125rem + 11vw);
 	}
 	#home-description {
-		padding: 2rem 4rem;
+		padding: 2rem 3rem;
 		gap: 0rem;
 	}
 	.container-description {
 		max-width: 100%;
-		padding: 3rem 5rem;
+		padding: 2rem;
+		text-align: center;
+		align-items: center;
 	}
 	.home-description-container {
 		gap: 0rem;
@@ -570,5 +595,55 @@
 	}
 	.maps-heading-background {
 		font-size: 9rem;
+	}
+}
+
+/* mobile view */
+@media screen and (max-width: 480px) {
+	.hero-heading {
+		font-size: calc(2.125rem + 7vw);
+	}
+	.hero-paragraph {
+		font-size: 1.25rem;
+	}
+	#home-description {
+		padding: 1rem 2rem;
+	}
+	.description-heading-background {
+		font-size: calc(1.5rem + 14vw);
+	}
+	.container-description-media {
+		width: 22.5rem;
+		height: 12.5rem;
+	}
+	.description-text {
+		font-size: 1.125rem;
+	}
+	#home-maps {
+		padding: 0rem 2rem;
+		margin-top: -50px;
+	}
+	.carousel-map-container {
+		height: 275px;
+	}
+	.arrow-icon {
+		width: 100px;
+	}
+	#home-agents {
+		padding: 0rem 2rem;
+	}
+	.agents-description-container {
+		padding-right: 0rem;
+	}
+	.home-maps-heading,
+	.home-agents-heading {
+		font-size: calc(1rem + 10vw);
+	}
+	.maps-heading-background,
+	.agents-heading-background {
+		font-size: calc(2rem + 19vw);
+	}
+	#home-news {
+		margin-top: -50px;
 	}
 }
