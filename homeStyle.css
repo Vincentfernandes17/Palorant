@@ -1,5 +1,44 @@
 @import url(base.css);
 /* Section: Description */
+
+.hero-content {
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 120vh;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.hero-heading {
+	font-family: "valorax";
+	color: var(--white-color);
+	font-size: 8.5rem;
+	font-weight: normal;
+	text-shadow: var(--heading-shadow);
+	margin-top: -100px;
+}
+
+.hero-paragraph {
+	font-family: "dinnext";
+	font-size: 1.875rem;
+	color: var(--white-color);
+	text-align: center;
+	text-shadow: var(--paragraph-shadow);
+}
+
+.background-video {
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	left: 0;
+	top: 0;
+	object-fit: cover;
+}
+
 #home-description {
 	position: relative;
 	display: flex;
