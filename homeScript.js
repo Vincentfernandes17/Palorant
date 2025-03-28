@@ -8,13 +8,7 @@ class Carousel {
 
 	updateCarousel() {
 		this.carouselItems.forEach((item, index) => {
-			item.classList.remove(
-				`${this.carouselPrefix}-item-1`,
-				`${this.carouselPrefix}-item-2`,
-				`${this.carouselPrefix}-item-3`,
-				`${this.carouselPrefix}-item-4`,
-				`${this.carouselPrefix}-item-5`
-			);
+			item.classList.remove(`${this.carouselPrefix}-item-1`, `${this.carouselPrefix}-item-2`, `${this.carouselPrefix}-item-3`, `${this.carouselPrefix}-item-4`, `${this.carouselPrefix}-item-5`);
 
 			item.classList.add(`${this.carouselPrefix}-item-${index + 1}`);
 		});
