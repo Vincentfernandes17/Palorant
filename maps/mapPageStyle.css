@@ -1,0 +1,22 @@
+@import url(../base.css);
+@import url(../mapsStyle.css);
+
+.ascant-page {
+	background-image: url(../assets/img/maps/ascant/ascant.webp);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: fixed;
+}
+
+.hero-content {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.hero-container {
+	text-align: center;
+}
