@@ -61,7 +61,7 @@
 }
 
 .line-separator.line-agent {
-	margin: -1.5rem 0 0 0;
+	margin: -1.25rem 0 0 0;
 	height: 2px;
 	width: 90%;
 }
@@ -87,6 +87,7 @@
 @media screen and (max-width: 768px) {
 	.hero-section {
 		justify-content: center;
+		height: 100vh;
 	}
 	.hero-container {
 		align-items: center;
@@ -99,7 +100,7 @@
 		font-size: calc(2rem + 12vw);
 	}
 	#maps {
-		margin: 1rem 0rem;
+		margin: 0rem 0rem 1rem 0rem;
 	}
 }
 

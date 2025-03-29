@@ -1,0 +1,37 @@
+@import url(base.css);
+@import url(agentStyle.css);
+
+.hero-description {
+	background: url(assets/img/background/palorant-background.png);
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+.line-separator.line-agent {
+	width: 45%;
+}
+
+.hero-description {
+	align-items: flex-start;
+}
+
+.hero-section {
+	background-color: var(--primary-color);
+}
+
+.hero-wrap {
+	background-color: var(--white-color);
+}
+.hero-heading {
+	color: var(--primary-color);
+}
+
+.news-grid {
+	margin-top: -1px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 330px);
+	justify-content: center;
+	gap: 4rem;
+	padding: 4rem 3rem;
+	background-color: var(--primary-color);
+}

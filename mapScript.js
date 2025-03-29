@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 	const images = document.querySelectorAll(".bg-image");
 	let currentIndex = 0;
-	const delayTime = 5000;
+	const delayTime = 7500;
 
 	function startSlideshow() {
 		images[currentIndex].classList.add("active");
