@@ -1,15 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-	// Get form element
 	const form = document.getElementById("reportBugForm");
 
-	// Get input elements using individual variables
 	const usernameInput = document.getElementById("inputUsername");
 	const emailInput = document.getElementById("inputEmail");
 	const serverInput = document.getElementById("inputServer");
 	const descriptionInput = document.getElementById("inputDescription");
 	const checkboxInput = document.getElementById("inputCheck");
 
-	// Error display function
 	function showError(input, message) {
 		const errorElement = document.createElement("div");
 		errorElement.className = "error-message";
@@ -17,7 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		input.parentNode.insertAdjacentElement("afterend", errorElement);
 	}
 
-	// Clear existing errors
 	function clearErrors() {
 		document.querySelectorAll(".error-message").forEach((error) => error.remove());
 	}
@@ -25,103 +21,88 @@ document.addEventListener("DOMContentLoaded", function () {
 	form.addEventListener("submit", function (e) {
 		e.preventDefault();
 		clearErrors();
-		let isValid = true;
+		let valid = true;
 
-		// Get trimmed values from inputs
 		const username = usernameInput.value;
 		const email = emailInput.value;
 		const server = serverInput.value;
 		const description = descriptionInput.value;
-		const isChecked = checkboxInput.checked;
+		const checked = checkboxInput.checked;
 
-		// Store validation errors
 		const errors = [];
 
-		// Validation checks
-		// 1. Required fields
-		if (!username) {
+		if (username === "") {
 			errors.push({ field: usernameInput, msg: "Username is required!" });
-			isValid = false;
-		}
-		if (!email) {
-			errors.push({ field: emailInput, msg: "Email is required!" });
-			isValid = false;
-		}
-		if (!server) {
-			errors.push({ field: serverInput, msg: "Server is required!" });
-			isValid = false;
-		}
-		if (!description) {
-			errors.push({ field: descriptionInput, msg: "Description is required!" });
-			isValid = false;
-		}
-
-		// 2. Username validation
-		if (username) {
+			valid = false;
+		} else {
 			if (username.length < 3 || username.length > 20) {
 				errors.push({ field: usernameInput, msg: "Username must be 3-20 characters" });
-				isValid = false;
+				valid = false;
 			}
 			if (username.includes(" ")) {
 				errors.push({ field: usernameInput, msg: "Username cannot contain spaces" });
-				isValid = false;
+				valid = false;
 			}
 		}
-
-		// 3. Email validation
-		if (email) {
+		if (email === "") {
+			errors.push({ field: emailInput, msg: "Email is required!" });
+			valid = false;
+		} else {
 			const atIndex = email.indexOf("@");
 			if (atIndex === -1 || atIndex === 0) {
 				errors.push({ field: emailInput, msg: "Invalid email format" });
-				isValid = false;
+				valid = false;
 			} else {
 				const domain = email.slice(atIndex + 1);
 				if (!domain.endsWith(".com")) {
 					errors.push({ field: emailInput, msg: "Email must end with .com" });
-					isValid = false;
+					valid = false;
 				}
 				if (email.includes(" ")) {
 					errors.push({ field: emailInput, msg: "Email cannot contain spaces" });
-					isValid = false;
+					valid = false;
 				}
 			}
 		}
-
-		// 4. Server validation
-		if (server) {
+		if (server === "") {
+			errors.push({ field: serverInput, msg: "Server is required!" });
+			valid = false;
+		} else {
 			const parts = server.split("-");
 			if (parts.length !== 2 || parts[0].length !== 2 || isNaN(parts[1]) || parts[1].length === 0) {
 				errors.push({ field: serverInput, msg: "Server format: Region-Number (e.g., NA-1)" });
-				isValid = false;
+				valid = false;
 			}
 		}
-
-		// 5. Description validation
-		if (description) {
+		if (description === "") {
+			errors.push({ field: descriptionInput, msg: "Description is required!" });
+			valid = false;
+		} else {
 			if (description.length < 20 || description.length > 500) {
 				errors.push({ field: descriptionInput, msg: "Description must be 20-500 characters" });
-				isValid = false;
+				valid = false;
 			}
 		}
 
-		// Checkbox validation
-		if (!isChecked) {
+		if (checked === false) {
 			errors.push({ field: checkboxInput, msg: "You must agree to receive updates!" });
-			isValid = false;
+			valid = false;
 		}
 
-		// Handle validation results
-		if (!isValid) {
+		if (valid === false) {
 			errors.forEach((error) => showError(error.field, error.msg));
 			errors[0].field.focus();
 		} else {
-			console.log("submitted");
+			// console.log("submitted");
 			form.reset();
 			alert("Thank you for your bug report!");
+
+			document.querySelectorAll(".input-effect").forEach((input) => {
+				input.classList.remove("has-content");
+			});
 		}
 	});
 
-	// Clear errors on input
 	const allInputs = [usernameInput, emailInput, serverInput, descriptionInput, checkboxInput];
 	allInputs.forEach((input) => {
 		input.addEventListener("input", () => {
