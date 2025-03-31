@@ -295,7 +295,7 @@ nav ul .active {
 	border-radius: 6px;
 }
 
-.play-now-btn:hover {
+.btn:hover {
 	box-shadow: 0 0 10px 0 var(--secondary-color) inset, 0 0 10px 4px var(--secondary-color);
 	color: var(--secondary-color);
 }
