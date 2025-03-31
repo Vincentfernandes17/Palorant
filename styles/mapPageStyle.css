@@ -1,0 +1,250 @@
+@import url(base.css);
+@import url(mapsStyle.css);
+
+.ascant-page {
+	background-image: url(../assets/img/maps/ascant/ascant.webp);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.bend-page {
+	background-image: url(../assets/img/maps/bend/bend.webp);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.havent-page {
+	background-image: url(../assets/img/maps/havent/havent.webp);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.splot-page {
+	background-image: url(../assets/img/maps/splot/splot.webp);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.sunrise-page {
+	background-image: url(../assets/img/maps/sunrise/sunrise.webp);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.hero-content {
+	position: relative;
+	width: 100%;
+	height: 120vh;
+	display: flex;
+	align-items: center;
+}
+
+.hero-heading {
+	font-size: calc(0.5rem + 7vw);
+}
+
+.hero-text {
+	font-size: 1.375rem;
+}
+
+.hero-container {
+	text-align: center;
+}
+
+.map-detail {
+	background-color: var(--white-color);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.gallery-container {
+	position: relative;
+	width: 65%;
+	min-height: calc(570px + 0.5rem);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 0.5rem;
+	margin: 1rem 0rem 4rem 0;
+}
+
+.gallery-row {
+	width: 60%;
+	display: flex;
+	flex-direction: row;
+	gap: 0.5rem;
+}
+
+.gallery-item {
+	position: absolute;
+	background-color: var(--lightGrey-color);
+	height: 440px;
+	width: 100%;
+	top: 0;
+}
+
+.gallery-item img {
+	max-height: 100%;
+	object-fit: contain;
+	height: 100%;
+	width: 100%;
+}
+
+.gallery-control {
+	position: absolute;
+	top: 40%;
+	transform: translateY(-50%);
+	z-index: 4;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.gallery-control-prev {
+	left: 3%;
+}
+
+.gallery-control-next {
+	right: 3%;
+}
+
+.gallery-row {
+	bottom: 0;
+	height: 130px;
+	width: 100%;
+	overflow-x: auto;
+}
+
+.gallery-row-image img {
+	height: 100%;
+}
+
+.gallery-item {
+	opacity: 0;
+	transition: opacity 0.45s ease-in-out;
+	z-index: 1;
+}
+
+.gallery-item.active {
+	opacity: 1;
+	z-index: 2;
+}
+
+.gallery-row-image {
+	cursor: pointer;
+	transition: opacity 0.25s ease;
+	flex: 0 0 27.5%;
+	opacity: 0.5;
+	position: relative;
+}
+
+.gallery-row-image.active {
+	opacity: 1;
+}
+
+.gallery-row-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.gallery-row::-webkit-scrollbar {
+	height: 8px;
+}
+
+.gallery-row::-webkit-scrollbar-thumb {
+	background: var(--lightGrey-color);
+	border-radius: 1rem;
+}
+
+@media screen and (max-width: 1100px) {
+	.hero-text {
+		font-size: 1.5rem;
+	}
+	.line-separator.line-agent {
+		margin: -0.75rem 0 0 0;
+	}
+}
+
+/* tablet view */
+@media screen and (max-width: 768px) {
+	.hero-container {
+		margin-top: -50px;
+		width: 100%;
+	}
+	.line-separator.line-agent {
+		margin: -0.75rem 0 0 0;
+	}
+
+	.gallery-container {
+		width: 90%;
+		min-height: 550px;
+	}
+
+	.gallery-item {
+		height: 420px;
+	}
+
+	.gallery-row {
+		height: 120px;
+	}
+
+	.gallery-control-prev {
+		left: 2%;
+	}
+
+	.gallery-control-next {
+		right: 2%;
+	}
+
+	.hero-heading {
+		font-size: calc(1rem + 12vw);
+	}
+	.hero-text {
+		font-size: 1.5rem;
+	}
+}
+
+/* mobile view */
+@media screen and (max-width: 480px) {
+	.hero-heading {
+		margin-top: -10px;
+		font-size: calc(0.75rem + 12vw);
+	}
+	.hero-text {
+		font-size: calc(0.5rem + 2.5vw);
+	}
+	.hero-container {
+		padding: 2rem 2rem;
+	}
+	.line-separator.line-agent {
+		margin: -0.25rem 0 0 0;
+	}
+	.gallery-container {
+		width: 90%;
+		min-height: 350px;
+	}
+
+	.gallery-item {
+		height: 240px;
+	}
+
+	.gallery-row {
+		height: 100px;
+	}
+
+	.gallery-row-image {
+		flex: 0 0 45%;
+	}
+}

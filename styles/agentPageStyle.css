@@ -1,0 +1,282 @@
+@import url("base.css");
+@import url("agentStyle.css");
+
+.hero-section {
+	background-color: var(--primary-color);
+}
+
+.hero-description {
+	padding: 10rem 0rem;
+}
+
+.hero-wrap {
+	background-color: var(--white-color);
+}
+
+.hero-heading {
+	color: var(--primary-color);
+}
+
+.line-separator.line-blue {
+	background-color: var(--primary-color);
+	margin: 0;
+}
+
+.hero-text {
+	color: var(--primary-color);
+}
+
+.agent-yori {
+	filter: drop-shadow(0px 0px 75px rgba(34, 38, 108, 0.75));
+}
+
+.agent-amen {
+	filter: drop-shadow(0px 0px 75px rgba(126, 128, 186, 0.75));
+}
+
+.agent-sifer {
+	filter: drop-shadow(0px 0px 75px rgba(41, 40, 46, 0.75));
+}
+
+.agent-vapor {
+	filter: drop-shadow(0px 0px 75px rgba(26, 174, 94, 0.75));
+}
+
+.agent-skyo {
+	filter: drop-shadow(0px 0px 75px rgba(142, 234, 164, 0.75));
+}
+
+.agent-role-container {
+	background-color: var(--primary-color);
+	height: 8%;
+	display: flex;
+	flex-direction: row;
+	align-self: flex-start;
+	align-items: center;
+	margin-left: 6%;
+	border-radius: 6px;
+	margin-top: -15px;
+	margin-bottom: 15px;
+}
+
+.agent-role-symbol {
+	height: 100%;
+	max-height: 100px;
+	width: max-content;
+	padding: 0.375rem;
+}
+
+.agent-role-text {
+	font-size: 1.25rem;
+	padding-right: 0.375rem;
+}
+
+.hero-text {
+	font-size: 1.5rem;
+}
+
+.agents-ability {
+	background-color: var(--primary-color);
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	padding: 0rem 4rem;
+	margin-top: -1px;
+}
+
+.ability-navigation {
+	display: flex;
+	flex-flow: column;
+	width: 40%;
+	align-items: center;
+	gap: 1rem;
+	flex: 1 1 500px;
+}
+
+.ability-control {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-evenly;
+}
+
+.ability-container {
+	position: relative;
+	opacity: 0.5;
+	transition: all 0.25s ease-in-out;
+}
+
+.ability-container:hover {
+	opacity: 1;
+}
+
+.ability-container.active {
+	opacity: 1;
+}
+
+.ability-container.active::after {
+	content: "";
+	height: 115px;
+	border-radius: 50%;
+	width: 115px;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	background: linear-gradient(150deg, rgba(255, 255, 255, 0.55) 50%, rgba(255, 255, 255, 0.6) 100%);
+	box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.6) inset;
+	position: absolute;
+	color: var(--lightGrey-color);
+	z-index: 0;
+	transition: all 0.25s ease-in-out;
+}
+
+.ability-control img {
+	max-width: 5rem;
+	width: fit-content;
+	height: 100%;
+	aspect-ratio: 1 / 1;
+}
+
+.special-ability-title {
+	font-size: 4.25rem;
+	font-family: "anton";
+	color: var(--white-color);
+	font-weight: normal;
+}
+
+.ability-showcase {
+	width: 55%;
+	height: 50rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+}
+
+.ability-showcase-wrap {
+	width: 90%;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	opacity: 0;
+	transition: opacity 0.25s ease-in-out;
+}
+.ability-showcase-wrap.active {
+	opacity: 1;
+}
+
+.ability-showcase-wrap video {
+	width: 100%;
+	border-radius: 5px;
+}
+
+.ability-name {
+	color: var(--white-color);
+	font-family: "anton";
+	font-size: 3.25rem;
+	font-weight: normal;
+	letter-spacing: 1px;
+	text-align: center;
+	padding: 0.5rem 0rem 0.125rem 0rem;
+}
+
+.ability-description {
+	color: var(--white-color);
+	font-size: 1.525rem;
+	font-weight: normal;
+	text-align: center;
+}
+
+@media screen and (max-width: 984px) {
+	.hero-description {
+		padding: 6rem 0rem 0rem 0rem;
+	}
+}
+
+/* ability control spacing */
+@media screen and (max-width: 600px) {
+	.hero-section {
+		padding-bottom: 0rem;
+	}
+	.agents-ability {
+		margin-top: -20px;
+		padding: 0rem 2rem;
+	}
+	.ability-control img {
+		max-width: calc(5rem - 2vw);
+	}
+	.ability-container.active::after {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+@media screen and (max-width: 1239px) {
+	.ability-showcase {
+		width: 80%;
+		height: 47.5rem;
+		padding: 4rem 0rem;
+	}
+}
+
+/* tablet view */
+@media screen and (max-width: 768px) {
+	.ability-showcase {
+		width: 100%;
+		height: 45rem;
+		padding: 2rem 0rem;
+	}
+	.ability-description {
+		font-size: 1.375rem;
+	}
+}
+
+/* mobile view */
+@media screen and (max-width: 480px) {
+	.hero-wrap {
+		padding: 0rem 2rem;
+	}
+	.hero-description {
+		padding: 4rem 0rem 0rem 0rem;
+	}
+	.hero-text {
+		padding-bottom: 1rem;
+	}
+	.hero-content {
+		margin-top: -20px;
+		background-size: auto;
+	}
+	.hero-content img {
+		height: 145%;
+	}
+	.special-ability-title {
+		font-size: 3.25rem;
+	}
+	.ability-container.active::after {
+		width: 80px;
+		height: 80px;
+	}
+	.ability-showcase {
+		height: 36.5rem;
+	}
+	.ability-showcase-wrap {
+		width: 95%;
+	}
+	.ability-name {
+		font-size: 2.625rem;
+	}
+	.ability-description {
+		font-size: 1.25rem;
+	}
+	.ability-control img {
+		max-width: calc(5rem - 5vw);
+	}
+	.ability-description {
+		font-size: 1.125rem;
+	}
+}

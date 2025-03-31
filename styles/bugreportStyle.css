@@ -1,0 +1,355 @@
+@import url(base.css);
+
+body {
+	background-color: var(--primary-color);
+}
+
+.background-bugreport {
+	background-image: url(../assets/img/background/palorant-background.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	position: absolute;
+	background-attachment: fixed;
+	width: 100%;
+	height: 140vh;
+	z-index: -1;
+	filter: blur(6px);
+}
+
+.reportBugForm {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.hero-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 6rem;
+	padding-bottom: 3rem;
+}
+
+.hero-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 75%;
+}
+
+.hero-description {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+}
+
+.hero-heading {
+	font-family: "anton";
+	font-size: 4.5rem;
+	font-weight: normal;
+	color: var(--white-color);
+	text-align: center;
+	text-shadow: var(--heading-shadow);
+}
+.line-separator.line-reportBug {
+	margin: 0rem 0rem 1rem 0rem;
+	height: 2px;
+}
+
+.hero-text {
+	color: var(--white-color);
+	font-size: 1.375rem;
+	text-align: center;
+	text-shadow: var(--paragraph-shadow);
+}
+
+.bug-report-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	padding-bottom: 4rem;
+	width: 75%;
+}
+
+.inputCheck-text {
+	color: var(--white-color);
+	font-size: 1.25rem;
+	padding-left: 0.5rem;
+}
+
+textarea,
+.input-text {
+	padding: 0.75rem 1rem;
+	width: 70%;
+	border-radius: 4px;
+	border: none;
+	outline: none;
+	font-size: 1.2rem;
+}
+
+textarea {
+	min-height: 100px;
+	overflow-y: auto;
+	word-wrap: break-word;
+}
+
+.register-btn {
+	padding: 1rem 3rem;
+	border-radius: 6px;
+	font-size: 1.125rem;
+	margin: 2.5rem 0rem 2rem 0rem;
+}
+
+.input-container {
+	position: relative;
+	margin: 1.25rem 0rem 0rem 0rem;
+	width: 80%;
+	transition: all 0.25s ease-in-out;
+	border-radius: 6px;
+}
+
+.checkbox-container {
+	width: 80%;
+}
+
+.input-effect {
+	width: 100%;
+	padding: 10px;
+	border: none;
+	outline: none;
+	background: var(--white-color);
+	border-bottom: 2px solid var(--lightGrey-color);
+	transition: 0.3s;
+}
+
+.focus-border {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	top: 0;
+	left: 0;
+}
+
+.focus-border:before,
+.focus-border:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: var(--lightGrey-color);
+	transition: 0.3s;
+}
+
+.focus-border:after {
+	top: auto;
+	bottom: 0;
+	left: auto;
+	right: 0;
+}
+
+.focus-border i:before,
+.focus-border i:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2px;
+	height: 0;
+	background-color: var(--lightGrey-color);
+	transition: 0.4s;
+}
+
+.focus-border i:after {
+	left: auto;
+	right: 0;
+	top: auto;
+	bottom: 0;
+}
+
+.input-effect:focus ~ .focus-border:before,
+.input-effect:focus ~ .focus-border:after,
+.input-effect.has-content ~ .focus-border:before,
+.input-effect.has-content ~ .focus-border:after {
+	width: 100%;
+	transition: 0.3s;
+}
+
+.input-effect:focus ~ .focus-border i:before,
+.input-effect:focus ~ .focus-border i:after,
+.input-effect.has-content ~ .focus-border i:before,
+.input-effect.has-content ~ .focus-border i:after {
+	height: 100%;
+	transition: 0.3s;
+}
+
+.input-effect ~ label {
+	position: absolute;
+	left: 0.625rem;
+	width: 100%;
+	top: 0.75rem;
+	color: var(--lightGrey-color);
+	transition: 0.3s;
+	pointer-events: none;
+	letter-spacing: 0.5px;
+}
+
+.input-effect:focus ~ label,
+.input-effect.has-content ~ label {
+	top: -1.375rem;
+	left: 0;
+	font-size: 1.1rem;
+	color: var(--white-color);
+	transition: 0.3s;
+}
+
+.input-container:has(.input-effect:focus) {
+	margin-top: 2rem;
+}
+
+textarea.input-effect {
+	resize: vertical;
+	min-height: 120px;
+}
+
+.checkbox-container {
+	margin: 1rem 0rem 0rem 0rem;
+	display: flex;
+	align-items: center;
+}
+
+.error-message {
+	color: rgb(255, 69, 69);
+	font-size: 1rem;
+	width: 80%;
+}
+
+/* Tablet view */
+@media screen and (max-width: 768px) {
+	.hero-section {
+		padding-bottom: 2rem;
+	}
+	.hero-container,
+	.bug-report-container {
+		width: 90%;
+	}
+
+	.inputCheck-text {
+		font-size: 1.125rem;
+	}
+	.hero-heading {
+		font-size: 4.125rem;
+	}
+	.hero-text {
+		font-size: 1.25rem;
+	}
+	.input-container {
+		width: 82.5%;
+	}
+	.checkbox-container {
+		width: 82.5%;
+	}
+	.error-message {
+		width: 82.5%;
+	}
+}
+
+/* Mobile view */
+@media screen and (max-width: 480px) {
+	textarea,
+	.input-text {
+		width: 100%;
+	}
+	.hero-heading {
+		font-size: 3.875rem;
+	}
+	.hero-text {
+		font-size: 1.125rem;
+	}
+	.input-container {
+		width: 87.5%;
+	}
+	.checkbox-container {
+		width: 87.5%;
+	}
+	.error-message {
+		width: 87.5%;
+	}
+}
+
+.effect-20 ~ .focus-border:before,
+.effect-20 ~ .focus-border:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #4caf50;
+	transition: 0.3s;
+}
+.effect-20 ~ .focus-border:after {
+	top: auto;
+	bottom: 0;
+	left: auto;
+	right: 0;
+}
+.effect-20 ~ .focus-border i:before,
+.effect-20 ~ .focus-border i:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2px;
+	height: 0;
+	background-color: #4caf50;
+	transition: 0.4s;
+}
+.effect-20 ~ .focus-border i:after {
+	left: auto;
+	right: 0;
+	top: auto;
+	bottom: 0;
+}
+.effect-20:focus ~ .focus-border:before,
+.effect-20:focus ~ .focus-border:after,
+.has-content.effect-20 ~ .focus-border:before,
+.has-content.effect-20 ~ .focus-border:after {
+	width: 100%;
+	transition: 0.3s;
+}
+.effect-20:focus ~ .focus-border i:before,
+.effect-20:focus ~ .focus-border i:after,
+.has-content.effect-20 ~ .focus-border i:before,
+.has-content.effect-20 ~ .focus-border i:after {
+	height: 100%;
+	transition: 0.4s;
+}
+.effect-20 ~ label {
+	position: absolute;
+	left: 14px;
+	width: 100%;
+	top: 10px;
+	color: #aaa;
+	transition: 0.3s;
+	z-index: -1;
+	letter-spacing: 0.5px;
+}
+.effect-20:focus ~ label,
+.has-content.effect-20 ~ label {
+	top: -18px;
+	left: 0;
+	font-size: 12px;
+	color: #4caf50;
+	transition: 0.3s;
+}

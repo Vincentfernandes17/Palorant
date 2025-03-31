@@ -1,0 +1,125 @@
+@import url(base.css);
+@import url(homeStyle.css);
+
+#maps {
+	background-color: var(--white-color);
+	margin: 2rem 0rem;
+}
+
+.bg-image.active {
+	opacity: 1;
+}
+
+.bg-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+	z-index: -1;
+}
+
+.bg-image-1 {
+	background-image: url(../assets/img/maps/ascant/ascant.webp);
+}
+
+.bg-image-2 {
+	background-image: url(../assets/img/maps/bend/bend.webp);
+}
+
+.bg-image-3 {
+	background-image: url(../assets/img/maps/havent/havent.webp);
+}
+
+.bg-image-4 {
+	background-image: url(../assets/img/maps/splot/splot.webp);
+}
+
+.bg-image-5 {
+	background-image: url(../assets/img/maps/sunrise/sunrise.webp);
+}
+
+.hero-section {
+	position: relative;
+	width: 100%;
+	height: 120vh;
+	display: flex;
+	align-items: center;
+}
+
+.hero-container {
+	width: 60%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 2rem 6rem;
+}
+
+.line-separator.line-agent {
+	margin: -1.25rem 0 0 0;
+	height: 2px;
+	width: 90%;
+}
+
+.hero-heading {
+	font-family: "alfa";
+	font-size: 7.5rem;
+	letter-spacing: 4px;
+	text-shadow: var(--heading-shadow);
+	width: 90%;
+	font-weight: normal;
+}
+
+.hero-text {
+	width: 90%;
+	font-size: 1.5rem;
+	color: var(--white-color);
+	text-shadow: -2px 3px 2px rgba(0, 0, 0, 1);
+	font-weight: bold;
+}
+
+/* tablet view */
+@media screen and (max-width: 768px) {
+	.hero-section {
+		justify-content: center;
+		height: 100vh;
+	}
+	.hero-container {
+		align-items: center;
+		width: 90%;
+		margin-top: -100px;
+		padding: 2rem 4rem;
+		text-align: center;
+	}
+	.hero-heading {
+		font-size: calc(2rem + 12vw);
+	}
+	#maps {
+		margin: 0rem 0rem 1rem 0rem;
+	}
+}
+
+/* Mobile view */
+@media screen and (max-width: 480px) {
+	.hero-container {
+		align-items: center;
+		width: 100%;
+		margin-top: 10px;
+		padding: 2rem 3rem;
+		text-align: center;
+	}
+	.hero-heading {
+		font-size: calc(1rem + 15vw);
+	}
+	.line-separator.line-agent {
+		margin: -0.75rem 0 0 0;
+	}
+	.hero-text {
+		font-size: calc(0.75rem + 2.25vw);
+	}
+}

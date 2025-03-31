@@ -1,0 +1,166 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+		<title>PALORANT</title>
+		<link rel="icon" href="../../assets/img/logo/logo-white.png" type="image/x-icon" />
+		<link rel="stylesheet" href="../../styles/agentPageStyle.css" />
+	</head>
+	<body>
+		<header>
+			<nav id="navbar" class="nav-stay">
+				<div class="logo-container sidebar-hide">
+					<a href="../../pages/home.html">
+						<img src="../../assets/img/logo/logo-palorant-white.PNG" alt="Palorant Logo" />
+					</a>
+				</div>
+				<ul>
+					<li class="close-sidebar" id="close-sidebar" onclick="closeSideBar()">
+						<img class="close-sidebar-img" src="../../assets/img/icon/close-logo.svg" alt="Close image" />
+					</li>
+					<li class="home-li"><a href="../../pages/home.html">Home</a></li>
+					<li class="agents-li"><a href="../../pages/agents.html">Agents</a></li>
+					<li class="maps-li"><a href="../../pages/maps.html">Maps</a></li>
+					<li class="news-li"><a href="../../pages/news.html">News</a></li>
+					<li class="bugreport-li"><a href="../../pages/bugreport.html">Bug Report</a></li>
+				</ul>
+			</nav>
+			<div class="nav-showMobile mobile-logo-container nav-stay" id="nav-mobile">
+				<a href="../../pages/home.html">
+					<img class="logo-container" src="../../assets/img/logo/logo-palorant-white.PNG" alt="Palorant Logo" />
+				</a>
+				<button class="open-sidebar" id="open-sidebar" onclick="openSideBar()">
+					<img class="open-sidebar-img" src="../../assets/img/icon/hamburger-logo.svg" alt="Open Menu" />
+				</button>
+			</div>
+			<div id="overlay" onclick="closeSideBar()"></div>
+		</header>
+		<header class="hero-section">
+			<div class="hero-container">
+				<div class="hero-wrap">
+					<div class="hero-description">
+						<h1 class="hero-heading">SKYO</h1>
+						<div class="agent-role-container">
+							<img class="agent-role-symbol" src="../../assets/img/symbol/Initiator.webp" alt="Initiator Symbol" />
+							<p class="agent-role-text">Initiator</p>
+						</div>
+						<div class="line-separator line-agent line-blue"></div>
+						<p class="hero-text">
+							<span class="bold">Skyo</span>, Hailing from Australia, and her band of beasts trail-blaze the way through hostile territory. With her creations hampering the enemy, and
+							her power to heal others, the team is strongest and safest by Skyo’s side.
+						</p>
+					</div>
+					<div class="hero-content">
+						<img class="agent-role-img agent-skyo active" src="../../assets/img/agents/skyo.webp" alt="" />
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="agents-ability">
+			<div class="ability-navigation">
+				<h3 class="special-ability-title">SPECIAL ABILITY</h3>
+				<div class="ability-control">
+					<div class="ability-container first-ability active">
+						<img src="../../assets/img/symbol/skyoAbilities/Trailblazer.webp" alt="" class="ability-symbol" />
+					</div>
+					<div class="ability-container second-ability">
+						<img src="../../assets/img/symbol/skyoAbilities/Guiding_Light.webp" alt="" class="ability-symbol" />
+					</div>
+					<div class="ability-container third-ability">
+						<img src="../../assets/img/symbol/skyoAbilities/Regrowth.webp" alt="" class="ability-symbol" />
+					</div>
+					<div class="ability-container fourth-ability">
+						<img src="../../assets/img/symbol/skyoAbilities/Seekers.webp" alt="" class="ability-symbol" />
+					</div>
+				</div>
+			</div>
+			<div class="ability-showcase">
+				<div class="ability-showcase-wrap first-showcase active">
+					<video src="../../assets/img/video/abilities/skyo/trailblazer.mp4" class="first-video" autoplay loop muted></video>
+					<h6 class="ability-name first-name">Trailblazer</h6>
+					<p class="ability-description first-description">
+						EQUIP a Seeker trinket. FIRE to send out three Seekers to track down the three closest enemies. If a Seeker reaches its target, it Near sights them. Enemies can destroy the
+						Seekers.
+					</p>
+				</div>
+				<div class="ability-showcase-wrap second-showcase">
+					<video src="../../assets/img/video/abilities/skyo/guiding-light.mp4" class="second-video" autoplay loop muted></video>
+					<h6 class="ability-name second-name">Guiding Light</h6>
+					<p class="ability-description second-description">
+						EQUIP a hawk trinket. FIRE to send it forward. HOLD FIRE to guide the hawk in the direction of your crosshair. RE-USE while the hawk is in flight to transform it into a flash
+						that plays a hit confirm if an enemy was within range and line of sight.
+					</p>
+				</div>
+				<div class="ability-showcase-wrap third-showcase">
+					<video src="../../assets/img/video/abilities/skyo/regrowth.mp4" class="third-video" autoplay loop muted></video>
+					<h6 class="ability-name third-name">Regrowth</h6>
+					<p class="ability-description third-description">
+						EQUIP a healing trinket. HOLD FIRE to channel, healing allies in range and line of sight. Can be reused until her healing pool is depleted. Skye cannot heal herself.
+					</p>
+				</div>
+				<div class="ability-showcase-wrap fourth-showcase">
+					<video src="../../assets/img/video/abilities/skyo/seekers.mp4" class="fourth-video" autoplay loop muted></video>
+					<h6 class="ability-name fourth-name">Seekers</h6>
+					<p class="ability-description fourth-description">
+						EQUIP a Seeker trinket. FIRE to send out three Seekers to track down the three closest enemies. If a Seeker reaches its target, it Nearsights them. Enemies can destroy the
+						Seekers.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<footer class="footer-content">
+			<div class="footer-container">
+				<div class="wrapper-giot">
+					<img class="giot-logo" src="../../assets/img/logo/giot-company-logo.png" alt="Giot Logo" />
+					<p class="giot-description">Innovating the future of gaming with immersive experiences and competitive esports titles.</p>
+				</div>
+				<div class="wrapper-palorant">
+					<div class="wrapper-quick-links">
+						<h3>Quick Links</h3>
+						<ul>
+							<li class="footer-home-li"><a class="hover-animation-white redirect" href="../../pages/home.html">Home</a></li>
+							<li class="footer-agents-li">
+								<a class="hover-animation-white redirect" href="../../pages/agents.html">Agents</a>
+							</li>
+							<li class="footer-maps-li"><a class="hover-animation-white redirect" href="../../pages/maps.html">Maps</a></li>
+							<li class="footer-news-li"><a class="hover-animation-white redirect" href="../../pages/news.html">News</a></li>
+							<li class="footer-bugreport-li">
+								<a class="hover-animation-white redirect" href="../../pages/bugreport.html">Bug Report</a>
+							</li>
+						</ul>
+					</div>
+					<div class="wrapper-social">
+						<div class="giot-info">
+							<h3>Contact Us</h3>
+							<p class="giot-mail">info@giot.games</p>
+							<p class="giot-phone">+(213) 456-7890</p>
+						</div>
+						<div class="giot-social">
+							<h3>Follow Us</h3>
+							<div class="social-icon">
+								<img src="../../assets/img/icon/instagram-logo.svg" alt="Instagram logo" />
+								<img src="../../assets/img/icon/tiktok-logo.svg" alt="TIktok logo" />
+								<img src="../../assets/img/icon/facebook-logo.svg" alt="Facebook logo" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="line-separator"></div>
+				<div class="footer-close">
+					<div class="giot-copyright">
+						<img src="../../assets/img/icon/copyright-logo.svg" alt="Copyright" />
+						<p>2025 Giot Games Inc. All Rights Reserved</p>
+					</div>
+					<div class="giot-address">
+						<p>12333 W Olympic Blvd. Los Angeles, California, USA.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="../../scripts/script.js" defer></script>
+		<script src="../../scripts/agentPageScript.js" defer></script>
+	</body>
+</html>

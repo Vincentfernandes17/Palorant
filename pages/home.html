@@ -1,0 +1,266 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+		<title>PALORANT</title>
+		<link rel="icon" href="../assets/img/logo/logo-white.png" type="image/x-icon" />
+		<link rel="stylesheet" href="../styles/homeStyle.css" />
+	</head>
+	<body>
+		<header>
+			<nav id="navbar">
+				<div class="logo-container sidebar-hide">
+					<a href="home.html">
+						<img src="../assets/img/logo/logo-palorant-white.PNG" alt="Palorant Logo" />
+					</a>
+				</div>
+				<ul>
+					<li class="close-sidebar" id="close-sidebar" onclick="closeSideBar()">
+						<img class="close-sidebar-img" src="../assets/img/icon/close-logo.svg" alt="Close image" />
+					</li>
+					<li class="home-li"><a href="../pages/home.html">Home</a></li>
+					<li class="agents-li"><a href="../pages/agents.html">Agents</a></li>
+					<li class="maps-li"><a href="../pages/maps.html">Maps</a></li>
+					<li class="news-li"><a href="../pages/news.html">News</a></li>
+					<li class="bugreport-li"><a href="../pages/bugreport.html">Bug Report</a></li>
+				</ul>
+			</nav>
+			<div class="nav-showMobile mobile-logo-container" id="nav-mobile">
+				<a href="../pages/home.html">
+					<img class="logo-container" src="../assets/img/logo/logo-palorant-white.PNG" alt="Palorant Logo" />
+				</a>
+				<button class="open-sidebar" id="open-sidebar" onclick="openSideBar()">
+					<img class="open-sidebar-img" src="../assets/img/icon/hamburger-logo.svg" alt="Menu image" />
+				</button>
+			</div>
+			<div id="overlay" onclick="closeSideBar()"></div>
+		</header>
+		<header class="hero-content">
+			<h1 class="hero-heading">Palorant</h1>
+			<p class="hero-paragraph">A 5v5 team-based tactical shooter with immersive gameplay</p>
+			<button class="play-now-btn btn">Play Now</button>
+			<video loop muted autoplay class="background-video">
+				<source src="../assets/img/video/palorant-cinematic-mute.mp4" type="video/mp4" />
+			</video>
+			<div class="separator-gradient"></div>
+		</header>
+		<section id="home-description">
+			<div class="description-heading-container">
+				<h2 class="home-description-heading">Palorant</h2>
+				<p class="description-heading-background">What Is It?</p>
+			</div>
+			<div class="home-description-container">
+				<div class="container-description-media">
+					<video autoplay muted loop src="../assets/img/video/palorant-gameplay.mp4" class="video-gameplay"></video>
+					<img src="../assets/img/gameplay/valorant-gameplay-img-1.jpg" alt="" class="gameplay-img gameplay-1" />
+					<img src="../assets/img/gameplay/valorant-gameplay-img-2.jpg" alt="" class="gameplay-img gameplay-2" />
+					<img src="../assets/img/gameplay/valorant-gameplay-img-3.jpg" alt="" class="gameplay-img gameplay-3" />
+					<img src="../assets/img/gameplay/valorant-gameplay-img-4.jpg" alt="" class="gameplay-img gameplay-4" />
+				</div>
+				<div class="container-description">
+					<h6 class="description-heading">Unleash Your Potential</h6>
+					<p class="description-text">
+						Palorant is a 5v5 tactical FPS set in a near-future world, blending precise shooting with unique agent abilities. Featuring dynamic maps and competitive gameplay, appealing to
+						both casual and esports audiences.
+					</p>
+				</div>
+			</div>
+		</section>
+		<div class="container-trapesium-bawah">
+			<div class="trapesium-wrap-bawah">
+				<div class="separator-trapesium-bawah"></div>
+			</div>
+		</div>
+		<section id="home-news">
+			<div class="home-news-wrapper">
+				<div class="news-heading-container">
+					<a href="../pages/news.html" class="news-redirect hover-animation-white redirect invicible dummy">See More News →</a>
+					<h2 class="home-news-heading">What's New?</h2>
+					<a href="../pages/news.html" class="news-redirect hover-animation-white redirect">See More News →</a>
+				</div>
+				<div class="news-container">
+					<a href="../pages/news/news-1.html" class="news-1">
+						<div class="news-card">
+							<div class="news-img-box">
+								<img src="../assets/img/news/palorant-news-1.png" alt="News image" class="news-img" />
+							</div>
+							<div class="news-description">
+								<p class="news-date">
+									<span class="news-type">Patch Notes</span>
+									| 20/1/2025
+								</p>
+								<h6 class="news-title hover-animation-white redirect">PALORANT Patch Notes 1.00</h6>
+								<p class="news-description"> Vapor joins the lineup, along with fresh cosmetics, a revamped map rotation, improved Remake Voting mechanics, and additional updates. </p>
+							</div>
+						</div>
+					</a>
+					<a href="../pages/news/news-2.html" class="news-2">
+						<div class="news-card">
+							<div class="news-img-box">
+								<img src="../assets/img/news/palorant-news-2.png" alt="News image" class="news-img" />
+							</div>
+							<div class="news-description">
+								<p class="news-date">
+									<span class="news-type">Competitive</span>
+									| 12/1/2025
+								</p>
+								<h6 class="news-title hover-animation-white redirect">VCT Americas Kick-Off 2025</h6>
+								<p class="news-description"> It has arrived! Don’t miss the VCT Americas 2025 Kickoff Trailer—tune in from January 16 to February 8! </p>
+							</div>
+						</div>
+					</a>
+					<a href="../pages/news/news-3.html" class="news-3">
+						<div class="news-card">
+							<div class="news-img-box">
+								<img src="../assets/img/news/palorant-news-3.png" alt="News image" class="news-img" />
+							</div>
+							<div class="news-description">
+								<p class="news-date">
+									<span class="news-type">Skin Update</span>
+									| 10/1/2025
+								</p>
+								<h6 class="news-title hover-animation-white redirect">Void Skin Bundle Released!</h6>
+								<p class="news-description"> The latest skin bundle is live, featuring sleek designs and eye-catching style. Claim yours and dominate the game in style! </p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+		<div class="container-trapesium-atas">
+			<div class="trapesium-wrap-atas">
+				<div class="separator-trapesium-atas"></div>
+			</div>
+		</div>
+		<section id="home-agents">
+			<div class="home-agents-container">
+				<div class="agents-description-container">
+					<div class="agents-heading-container">
+						<h2 class="home-agents-heading">AGENTS</h2>
+						<p class="agents-heading-background">AGENTS</p>
+					</div>
+					<h6 class="agents-heading">Your Game, Your Way</h6>
+					<p class="agents-text">
+						Choose an Agent with abilities that empower your gameplay. Stealth, strategy, or bold aggression—it’s all in your hands. Shape each encounter with unique decisions and skills.
+						Create highlights that leave a lasting impression.
+					</p>
+					<div class="agents-redirect-container">
+						<a href="../pages/agents.html" class="agents-redirect hover-animation-black redirect">See More Agents →</a>
+					</div>
+				</div>
+				<div class="carousel-agent">
+					<div class="carousel-agent-container">
+						<button class="carousel-agent-controll-previous">
+							<img src="../assets/img/icon/arrow-left-primary.svg" alt="Previous" class="arrow-icon" />
+						</button>
+						<a href="../pages/agents/amen.html">
+							<img src="../assets/img/agents/amen-title.PNG" alt="Amen image" class="carousel-agent-item carousel-agent-item-1" data-index="1" />
+						</a>
+						<a href="../pages/agents/skyo.html">
+							<img src="../assets/img/agents/skyo-title.PNG" alt="Skyo image" class="carousel-agent-item carousel-agent-item-2" data-index="2" />
+						</a>
+						<a href="../pages/agents/yori.html">
+							<img src="../assets/img/agents/yori-title.PNG" alt="Yori image" class="carousel-agent-item carousel-agent-item-3" data-index="3" />
+						</a>
+						<a href="../pages/agents/sifer.html">
+							<img src="../assets/img/agents/sifer-title.PNG" alt="Sifer image" class="carousel-agent-item carousel-agent-item-4" data-index="4" />
+						</a>
+						<button class="carousel-agent-controll-next">
+							<img src="../assets/img/icon/arrow-right-primary.svg" alt="Next" class="arrow-icon" />
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="container-trapesium-bawah">
+			<div class="trapesium-wrap-bawah">
+				<div class="separator-trapesium-bawah"></div>
+			</div>
+		</div>
+		<section id="home-maps">
+			<div class="maps-heading-container">
+				<h2 class="home-maps-heading">MAPS</h2>
+				<p class="maps-heading-background">MAPS</p>
+			</div>
+			<div class="carousel-map">
+				<div class="carousel-map-container">
+					<button class="carousel-map-controll-previous">
+						<img src="../assets/img/icon/arrow-left-white.svg" alt="Previous" class="arrow-icon" />
+					</button>
+					<a href="../pages/maps/ascant.html">
+						<img src="../assets/img/maps/ascant/ascant-title.PNG" alt="Ascant Map" class="carousel-map-item carousel-map-item-1" data-index="1" />
+					</a>
+					<a href="../pages/maps/bend.html">
+						<img src="../assets/img/maps/bend/bend-title.PNG" alt="Bend Map" class="carousel-map-item carousel-map-item-2" data-index="2" />
+					</a>
+					<a href="../pages/maps/havent.html">
+						<img src="../assets/img/maps/havent/havent-title.PNG" alt="Haven Map" class="carousel-map-item carousel-map-item-3" data-index="3" />
+					</a>
+					<a href="../pages/maps/splot.html">
+						<img src="../assets/img/maps/splot/splot-title.PNG" alt="Splot Map" class="carousel-map-item carousel-map-item-4" data-index="4" />
+					</a>
+					<a href="../pages/maps/sunrise.html">
+						<img src="../assets/img/maps/sunrise/sunrise-title.PNG" alt="Sunrise Map" class="carousel-map-item carousel-map-item-5" data-index="5" />
+					</a>
+					<button class="carousel-map-controll-next">
+						<img src="../assets/img/icon/arrow-right-white.svg" alt="Next" class="arrow-icon" />
+					</button>
+				</div>
+			</div>
+		</section>
+		<footer class="footer-content">
+			<div class="footer-container">
+				<div class="wrapper-giot">
+					<img class="giot-logo" src="../assets/img/logo/giot-company-logo.png" alt="Giot Logo" />
+					<p class="giot-description"> Innovating the future of gaming with immersive experiences and competitive esports titles. </p>
+				</div>
+				<div class="wrapper-palorant">
+					<div class="wrapper-quick-links">
+						<h3>Quick Links</h3>
+						<ul>
+							<li class="footer-home-li"><a class="hover-animation-white redirect" href="../pages/home.html">Home</a></li>
+							<li class="footer-agents-li">
+								<a class="hover-animation-white redirect" href="../pages/agents.html">Agents</a>
+							</li>
+							<li class="footer-maps-li"><a class="hover-animation-white redirect" href="../pages/maps.html">Maps</a></li>
+							<li class="footer-news-li"><a class="hover-animation-white redirect" href="../pages/news.html">News</a></li>
+							<li class="footer-bugreport-li">
+								<a class="hover-animation-white redirect" href="../pages/bugreport.html">Bug Report</a>
+							</li>
+						</ul>
+					</div>
+					<div class="wrapper-social">
+						<div class="giot-info">
+							<h3>Contact Us</h3>
+							<p class="giot-mail">info@giot.games</p>
+							<p class="giot-phone">+(213) 456-7890</p>
+						</div>
+						<div class="giot-social">
+							<h3>Follow Us</h3>
+							<div class="social-icon">
+								<img src="../assets/img/icon/instagram-logo.svg" alt="Instagram logo" />
+								<img src="../assets/img/icon/tiktok-logo.svg" alt="TIktok logo" />
+								<img src="../assets/img/icon/facebook-logo.svg" alt="Facebook logo" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="line-separator"></div>
+				<div class="footer-close">
+					<div class="giot-copyright">
+						<img src="../assets/img/icon/copyright-logo.svg" alt="Copyright" />
+						<p>2025 Giot Games Inc. All Rights Reserved</p>
+					</div>
+					<div class="giot-address">
+						<p>12333 W Olympic Blvd. Los Angeles, California, USA.</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="../scripts/script.js" defer></script>
+		<script src="../scripts/homeScript.js" defer></script>
+	</body>
+</html>
