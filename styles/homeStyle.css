@@ -560,6 +560,28 @@
 	}
 }
 
+@media screen and (max-width: 400px) {
+	.hero-heading {
+		font-size: calc(1.625rem + 7vw) !important;
+	}
+	.play-now-btn {
+		padding: 1rem 3rem;
+	}
+	.container-description-media {
+		width: 20rem !important;
+		height: 12.5rem !important;
+	}
+	.description-heading-background {
+		font-size: calc(1.125rem + 14vw) !important;
+	}
+	.carousel-map-controll-previous {
+		left: 0%;
+	}
+	.carousel-map-controll-next {
+		right: 0%;
+	}
+}
+
 /* tablet view */
 @media screen and (max-width: 768px) {
 	.hero-heading {
