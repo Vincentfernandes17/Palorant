@@ -106,8 +106,23 @@ body {
 	}
 }
 
+@media screen and (min-height: 1160px) {
+	.news-grid {
+		padding-bottom: 3rem;
+	}
+}
+
+@media screen and (min-height: 1360px) {
+	.show-more-btn {
+		margin-bottom: 15rem;
+	}
+	.news-grid.show-all + button {
+		margin-bottom: 3rem;
+	}
+}
+
 /* Tablet view */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
 	.line-separator.line-news {
 		margin: -1.125rem 0 0 0;
 		width: 60%;
