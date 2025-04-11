@@ -566,7 +566,7 @@ footer li {
 
 .news-type {
 	color: var(--lightBlue-color);
-	text-shadow: var(--paragraph-shadow);
+	text-shadow: 0px 0px 1px rgba(0, 0, 0, 1);
 }
 
 .news-card {

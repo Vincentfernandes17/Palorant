@@ -18,27 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		document.querySelectorAll(".error-message").forEach((error) => error.remove());
 	}
 
-	usernameInput.addEventListener("input", function (e) {
-		const username = usernameInput.value;
-		const errors = [];
-
-		if (username === "") {
-			errors.push({ field: usernameInput, msg: "Username is required!" });
-			valid = false;
-		} else {
-			if (username.length < 3 || username.length > 20) {
-				errors.push({ field: usernameInput, msg: "Username must be 3-20 characters" });
-				valid = false;
-			}
-			if (username.includes(" ")) {
-				errors.push({ field: usernameInput, msg: "Username cannot contain spaces" });
-				valid = false;
-			}
-		}
-
-		errors.forEach((error) => showError(error.field, error.msg));
-	});
-
 	form.addEventListener("submit", function (e) {
 		e.preventDefault();
 		clearErrors();
