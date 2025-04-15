@@ -490,6 +490,22 @@
 	filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
+.carousel-agent-item-3:hover.skyo-agent {
+	filter: drop-shadow(0px 0px 35px rgba(142, 234, 164, 0.75));
+}
+
+.carousel-agent-item-3:hover.amen-agent {
+	filter: drop-shadow(0px 0px 35px rgba(126, 128, 186, 0.75));
+}
+
+.carousel-agent-item-3:hover.yori-agent {
+	filter: drop-shadow(0px 0px 35px rgba(34, 38, 108, 0.75));
+}
+
+.carousel-agent-item-3:hover.sifer-agent {
+	filter: drop-shadow(0px 0px 35px rgba(41, 40, 46, 0.75));
+}
+
 /* carousel spacing  */
 @media screen and (max-width: 878px) {
 	.carousel-agent {
