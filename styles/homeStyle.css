@@ -506,6 +506,31 @@
 	filter: drop-shadow(0px 0px 35px rgba(41, 40, 46, 0.75));
 }
 
+.best-agent-banner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: var(--primary-color);
+	width: 55%;
+	left: 50%;
+	transform: translateX(40%);
+	margin-top: -1rem;
+	box-shadow: -4px 4px var(--black-color);
+}
+
+.best-agent-title {
+	color: var(--white-color);
+	font-family: "anton";
+	font-size: 2.5rem;
+}
+
+.best-agent-text {
+	color: var(--white-color);
+	font-size: 1.25rem;
+	/* font-family: "anton"; */
+}
+
 /* carousel spacing  */
 @media screen and (max-width: 878px) {
 	.carousel-agent {
@@ -637,6 +662,10 @@
 	}
 	.maps-heading-background {
 		font-size: 9rem;
+	}
+	.best-agent-banner {
+		width: 70%;
+		transform: translateX(20%);
 	}
 }
 
