@@ -111,13 +111,13 @@ textarea {
 .input-container {
 	position: relative;
 	margin: 1.25rem 0rem 0rem 0rem;
-	width: 80%;
+	width: 70%;
 	transition: all 0.25s ease-in-out;
 	border-radius: 6px;
 }
 
 .checkbox-container {
-	width: 80%;
+	width: 70%;
 }
 
 .input-effect {
@@ -232,7 +232,7 @@ textarea.input-effect {
 .error-message {
 	color: rgb(255, 69, 69);
 	font-size: 1rem;
-	width: 80%;
+	width: 70%;
 }
 
 @media screen and (min-height: 930px) {
