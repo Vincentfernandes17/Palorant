@@ -114,12 +114,12 @@
 		text-align: center;
 	}
 	.hero-heading {
-		font-size: calc(1rem + 15vw);
+		font-size: calc(1rem + 15vw) !important;
 	}
 	.line-separator.line-agent {
 		margin: -0.75rem 0 0 0;
 	}
 	.hero-text {
-		font-size: calc(0.75rem + 2.25vw);
+		font-size: calc(0.5rem + 2.25vw);
 	}
 }
