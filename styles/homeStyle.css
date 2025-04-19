@@ -449,11 +449,11 @@
 }
 
 .carousel-map-controll-previous {
-	left: 10%;
+	left: 20%;
 }
 
 .carousel-map-controll-next {
-	right: 10%;
+	right: 20%;
 }
 .carousel-map-controll-previous:hover .arrow-icon,
 .carousel-map-controll-next:hover .arrow-icon {
@@ -472,11 +472,11 @@
 }
 
 .carousel-agent-controll-previous {
-	left: 10%;
+	left: 13.5%;
 }
 
 .carousel-agent-controll-next {
-	right: 10%;
+	right: 13.5%;
 }
 
 .carousel-agent-controll-previous:hover .arrow-icon,
@@ -485,9 +485,13 @@
 }
 
 .arrow-icon {
-	width: 150px;
+	width: 100px;
 	transition: transform 0.3s ease;
 	filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.arrow-icon.caorusel-agent-button {
+	width: 75px;
 }
 
 .carousel-agent-item-3:hover.skyo-agent {
@@ -544,7 +548,7 @@
 	}
 
 	.arrow-icon {
-		width: 150px;
+		width: 80px;
 	}
 
 	.carousel-map-item {
@@ -698,7 +702,13 @@
 		height: 275px;
 	}
 	.arrow-icon {
-		width: 100px;
+		width: 60px;
+	}
+	.carousel-map-controll-previous {
+		left: 3%;
+	}
+	.carousel-map-controll-next {
+		right: 3%;
 	}
 	#home-agents {
 		padding: 0rem 2rem;
