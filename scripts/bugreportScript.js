@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		modal.style.display = "block";
 		timeoutId = setTimeout(() => {
 			modal.style.display = "none";
-		}, 5000);
+		}, 4000);
 	}
 
 	closeModal.onclick = function () {
