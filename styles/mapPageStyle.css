@@ -50,7 +50,7 @@
 }
 
 .hero-heading {
-	font-size: calc(0.5rem + 7vw);
+	font-size: calc(0.5rem + 7vw) !important;
 }
 
 .hero-text {
@@ -170,7 +170,7 @@
 
 @media screen and (max-width: 1100px) {
 	.hero-text {
-		font-size: 1.5rem;
+		font-size: 1.5rem !important;
 	}
 	.line-separator.line-agent {
 		margin: -0.75rem 0 0 0;
@@ -209,10 +209,10 @@
 	}
 
 	.hero-heading {
-		font-size: calc(1rem + 12vw);
+		font-size: calc(1rem + 12vw) !important;
 	}
 	.hero-text {
-		font-size: 1.5rem;
+		font-size: 1.5rem !important;
 	}
 }
 
@@ -220,10 +220,10 @@
 @media screen and (max-width: 480px) {
 	.hero-heading {
 		margin-top: -10px;
-		font-size: calc(0.75rem + 12vw);
+		font-size: calc(0.5rem + 12vw) !important;
 	}
 	.hero-text {
-		font-size: calc(0.5rem + 2.5vw);
+		font-size: calc(0.5rem + 2.5vw) !important;
 	}
 	.hero-container {
 		padding: 2rem 2rem;

@@ -727,4 +727,10 @@
 	#home-news {
 		margin-top: -50px;
 	}
+	.carousel-agent-controll-previous {
+		left: 5%;
+	}
+	.carousel-agent-controll-next {
+		right: 5%;
+	}
 }
