@@ -30,6 +30,10 @@ body {
 	background-image: url(../assets/img/news/palorant-news-4.jpg);
 }
 
+.background-news-5 {
+	background-image: url(../assets/img/news/palorant-news-5.png);
+}
+
 .hero-section {
 	position: relative;
 	z-index: 2;
