@@ -343,6 +343,7 @@
 	opacity: 0;
 	height: 60%;
 	z-index: 1;
+	pointer-events: none;
 }
 
 .carousel-agent-item-2 {
@@ -350,6 +351,7 @@
 	opacity: 0.6;
 	height: 70%;
 	z-index: 2;
+	pointer-events: none;
 }
 
 .carousel-agent-item-3 {
@@ -367,6 +369,7 @@
 	opacity: 0.6;
 	height: 70%;
 	z-index: 2;
+	pointer-events: none;
 }
 
 .carousel-map {
@@ -409,6 +412,7 @@
 	opacity: 0.8;
 	height: 70%;
 	z-index: 2;
+	pointer-events: none;
 }
 
 .carousel-map-item-3 {
@@ -426,6 +430,7 @@
 	opacity: 0.8;
 	height: 70%;
 	z-index: 2;
+	pointer-events: none;
 }
 
 .carousel-map-item-5 {
