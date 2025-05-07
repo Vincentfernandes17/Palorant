@@ -276,6 +276,7 @@
 	.ability-control img {
 		/* max-width: 50px; */
 		width: 50px;
+		height: 50px;
 	}
 	.ability-description {
 		font-size: 1.125rem;
