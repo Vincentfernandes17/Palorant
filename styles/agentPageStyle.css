@@ -274,7 +274,8 @@
 		font-size: 1.25rem;
 	}
 	.ability-control img {
-		max-width: calc(5rem - 5vw);
+		/* max-width: 50px; */
+		width: 50px;
 	}
 	.ability-description {
 		font-size: 1.125rem;
