@@ -48,7 +48,7 @@
 
 .agent-role-container {
 	background-color: var(--primary-color);
-	height: 8%;
+	/* height: 8%; */
 	display: flex;
 	flex-direction: row;
 	align-self: flex-start;
@@ -241,7 +241,7 @@
 		padding: 0rem 2rem;
 	}
 	.hero-description {
-		padding: 4rem 0rem 0rem 0rem;
+		padding: 5.5rem 0rem 0rem 0rem;
 	}
 	.hero-text {
 		padding-bottom: 1rem;
@@ -279,5 +279,8 @@
 	}
 	.ability-description {
 		font-size: 1.125rem;
+	}
+	.agent-role-container {
+		margin-left: 0;
 	}
 }
