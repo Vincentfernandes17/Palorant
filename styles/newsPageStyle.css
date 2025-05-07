@@ -226,4 +226,8 @@ article ul {
 	.news-redirect {
 		position: initial;
 	}
+	.hero-image img {
+		width: 335px;
+		height: 190px;
+	}
 }
