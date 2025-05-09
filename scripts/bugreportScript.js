@@ -50,14 +50,30 @@ document.addEventListener("DOMContentLoaded", function () {
 			errors.push("Email is required!");
 			return errors;
 		}
+
 		const atIndex = email.indexOf("@");
 		if (atIndex === -1 || atIndex === 0) {
 			errors.push("Invalid email format");
 		} else {
 			const domain = email.slice(atIndex + 1);
-			if (!domain.endsWith(".com")) errors.push("Email must end with .com");
-			if (email.includes(" ")) errors.push("Email cannot contain spaces");
+
+			if (email.includes(" ")) {
+				errors.push("Email cannot contain spaces");
+			}
+
+			// Split domain into parts (e.g., ["example", "com"] or ["ac", "id"])
+			const domainParts = domain.split(".");
+			if (domainParts.length < 2) {
+				errors.push("Email must have a valid domain with a dot (e.g., example.com)");
+			} else {
+				// Check the part before the first dot
+				const domainName = domainParts[0];
+				if (domainName.length < 1) {
+					errors.push("Domain name must be at least one character long");
+				}
+			}
 		}
+
 		return errors;
 	}
 
